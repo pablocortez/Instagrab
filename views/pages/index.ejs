@@ -5,13 +5,12 @@
 </head>
 <body class="container">
 
-
 	<header>
 		<% include ../partials/header %>
 	</header>
 
 	<main>
-	<div class="row">
+		<div class="row">
 		<% grams.forEach(function(gram) { %>
 		<div class="instagram-pic col-sm-3">
 
@@ -21,21 +20,22 @@
 
 			<div class="instagram-bar">
 				<div class="likes">
-					<span class="glyphicon glyphicon-heart"></span>
-					<%= gram.likes.count %>
+					<span class="glyphicon glyphicon-heart"></span> <%= gram.likes.count %>
 				</div>
 
 				<div class="comments">
+					<span class="glyphicon glyphicon-comment"></span> <%= gram.comments.count %>
+				</div>
+			</div>
 
-
-	</div>
-
-
+		</div>
+		<% }); %>
+		</div>
 	</main>
 
 	<footer>
 		<% include ../partials/footer %>
 	</footer>
-
+	
 </body>
 </html>
